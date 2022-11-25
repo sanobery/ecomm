@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body{
     background-color: rgb(219,226,226);
 }
@@ -14,12 +15,14 @@ body{
     --bs-gutter-x: 0;
     box-shadow: 12px 12px 22px grey;
 }
+
 img{
 
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     height: auto;
 }
+
 footer{
     margin: 0;
     padding: 0;

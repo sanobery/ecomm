@@ -26,21 +26,25 @@ em {
     margin-left:-2px;
     margin-top: -5px;
 }
+
 #div1{
     margin-bottom: 10px;
-    
 }
+
 a{
     color:#fff;
 }
+
 a:hover{
     color:white;
     font-size: 20px;
 }
+
 h6{
     margin-left:30px;
     color: rgb(204, 22, 22);
 }
+
 .cart{
     background-color: aqua;
     width:250px;
@@ -48,10 +52,12 @@ h6{
     height: 500px;
     overflow-y: scroll;
 }
+
 .cartImg{
     width:auto;
     height:200px;
 }
+
 .hoverchangecolor{
     color:black;
 }

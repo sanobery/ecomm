@@ -1,48 +1,48 @@
-var kid = [
+var men = [
     {
-        url: "/assets/kids.jpeg",
+        url: "/assets/men1.jpeg",
         p: "Lorem ipsum dolor sit amet.",
         h6: "Jeans",
         pr: "Add To Cart"
     },
     {
-        url: "/assets/kids1.jpeg",
+        url: "/assets/men2.jpeg",
         p: "Lorem ipsum dolor sit amet.",
         h6: "Jeans",
         pr: "Add To Cart"
     },
     {
-        url: "/assets/kids2.jpeg",
+        url: "/assets/men3.jpeg",
         p: "Lorem ipsum dolor sit amet.",
         h6: "Jeans",
         pr: "Add To Cart"
     },
     {
-        url: "/assets/kids3.jpeg",
+        url: "/assets/men4.jpeg",
         p: "Lorem ipsum dolor sit amet.",
         h6: "Jeans",
         pr: "Add To Cart"
     },
     {
-        url: "/assets/kids4.jpeg",
+        url: "/assets/men5.jpeg",
         p: "Lorem ipsum dolor sit amet.",
         h6: "Jeans",
         pr: "Add To Cart",
     },
     {
-        url: "/assets/kids5.jpeg",
+        url: "/assets/men6.jpeg",
         p: "Lorem ipsum dolor sit amet.",
         h6: "Jeans",
         pr: "Add To Cart",
     },
     {
-        url: "/assets/kids6.jpeg",
+        url: "/assets/men7.jpeg",
         p: "Lorem ipsum dolor sit amet.",
         h6: "Jeans",
         pr: "Add To Cart",
     },
     {
-        url: "/assets/kids7.jpeg",
+        url: "/assets/men8.jpeg",
         p: "Lorem ipsum dolor sit amet.",
         h6: "Jeans",
         pr: "Add To Cart",
@@ -56,15 +56,15 @@ let sum = 0;
 var pr, size;
 
 // Dynamic item creation
-function myfunction() {
+function myfunction1() {
     var htmlelement = "";
-    for (var i = 0; i < kid.length; i++) {
+    for (var i = 0; i < men.length; i++) {
         htmlelement += '<div class="col-12 col-lg-3">'
             + '<div class="card cardinline">'
-            + '<img src="' + kid[i].url + '" class="card-img-top img img-responsive" alt="..." >'
+            + '<img src="' + men[i].url + '" class="card-img-top img img-responsive" alt="..." >'
             + '<div class="card-body">'
-            + '<h5 class="card-title">' + kid[i].h6 + '</h5>'
-            + '<h6>' + kid[i].p + '<h6>'
+            + '<h5 class="card-title">' + men[i].h6 + '</h5>'
+            + '<h6>' + men[i].p + '<h6>'
             + '<select data-size="' + i + '" data-id="' + i + '" onchange="getSize(this)">'
             + '<option>' + "Size" + '</option>'
             + '<option>' + "S" + '</option>'
@@ -74,7 +74,7 @@ function myfunction() {
             + '<option>' + "XXL" + '</option>'
             + '</select>'
             + '<br>'
-            + '<button class="btn btn-sm btn-primary" onclick="addToCart(this);" data-button-id="' + i + '" data-price="' + kid[i].price + '"  data-src="' + kid[i].url + '" data-para="' + kid[i].h6 + '">' + kid[i].pr + '</button>'
+            + '<button class="btn btn-sm btn-primary" onclick="addToCart(this);" data-button-id="' + i + '" data-price="' + men[i].price + '"  data-src="' + men[i].url + '" data-para="' + men[i].h6 + '">' + men[i].pr + '</button>'
             + '</div>'
             + '</div>'
             + '</div>';

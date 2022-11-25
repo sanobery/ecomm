@@ -1,52 +1,15 @@
-.cartBox{
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(0, 0, 0, 0.8);
-	z-index: 99999;
-	transition: 0.3s linear;
-	transform: scale(0);
+marquee{
+    background-color: rgb(182, 23, 23);
+    color:white;
 }
-.cartBox.active{
-	transform: scale(1);
-}
-.cartBox .cart{
-	position: relative;
-	height: 70%;
-	width: 80%;
-	background: #fff;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.cartBox .cart i{
-	position: absolute;
-	right: 0;
-	top: 0;
-	background:#f00;
-	padding:10px 15px;
-	color: #fff;
-	cursor: pointer;
-}
-.cartBox .cart i:hover{
-	background: #ff0000a5;
-}
-.cartBox .cart h1{
-	position: relative;
-	margin-top: 2%;
-	font-size: 2.8rem;
-	color: #017bf5;
-}
-footer{
-    background-color:rgb(56, 53, 53);
+
+footer {
+    background-color: rgb(56, 53, 53);
+    width:100%;
     text-align: center;
 }
-h3{
+
+h3 {
     text-align: center;
     margin-top: 10px;
     width: 120px;
@@ -54,20 +17,25 @@ h3{
     border-radius: 20px;
     box-shadow: 2px 2px 10px 5px rgb(156, 112, 58);
 }
-#price{
+
+#price {
     font-size: 18px;
 }
-navbar ul{
-    float:right;
+
+navbar ul {
+    float: right;
 }
-a{
+
+a {
     text-decoration: none;
-    color:rgb(194, 15, 15);
+    color: rgb(194, 15, 15);
 }
-a:hover{
-    color:rgb(233, 188, 40);
+
+a:hover {
+    color: rgb(233, 188, 40);
 }
-#shopnow{
+
+#shopnow {
     position: absolute;
     top: 50%;
     left: 60%;
@@ -81,19 +49,23 @@ a:hover{
     cursor: pointer;
     border-radius: 10px;
     text-align: center;
-  }
-  i{
-   color:rgb(167, 157, 157);
-  }
-  ul li{
+}
+
+i {
+    color: rgb(167, 157, 157);
+}
+
+ul li {
     list-style-type: none;
-  }
-@media only screen and (min-width:280px) and (max-width:500px){
-    img{
-        width:350px;
-        height:300px;
+}
+
+@media only screen and (min-width:280px) and (max-width:500px) {
+    img {
+        width: 350px;
+        height: 300px;
     }
-    #shopnow{
+
+    #shopnow {
         position: absolute;
         top: 60%;
         left: 60%;
@@ -107,13 +79,12 @@ a:hover{
         cursor: pointer;
         border-radius: 10px;
         text-align: center;
-      }
-}
-@media only screen and (min-width:900px) and (max-width:2000px){
-    img{
-        width:1300px;
-        height:400px;
     }
 }
 
-
+@media only screen and (min-width:900px) and (max-width:2000px) {
+    img {
+        width: 1300px;
+        height: 400px;
+    }
+}

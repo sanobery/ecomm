@@ -8,10 +8,12 @@
     justify-content: space-around;
     align-items: center;
 }
+
 img{
     height: 200px;
     width:200px;
 }
+
 em{
     color:red;
 }
@@ -48,6 +50,7 @@ footer {
     background-color: rgb(56, 53, 53);
     text-align: center;
 }
+
 #offcanvasExampleLabel{
    color:rgb(175, 23, 23);
 }
@@ -55,24 +58,29 @@ footer {
 h1{
     color:rgb(167, 157, 157);
 }
+
 .table tr,
 .table tr td{
     vertical-align: middle;
 }
+
 .button-container{
     display: flex;
     align-items: center;
 }
+
 .button-container .form-control{
 display:inline-block;
 max-width: 80px;
 text-align: center;
 margin: 0px 5px;
 }
+
 #mytable .form-control{
     display: inline-block;
     width: auto;
 }
+
 .cart-qty-plus, .cart-qty-minus{
     width:30px;
     height:30px;
@@ -81,14 +89,17 @@ margin: 0px 5px;
     border-radius: 50%;
     border:1px solid rgb(167, 157, 157);
 }
+
 .img-prod{
     width:50px;
     height:50px;
 }
+
 .img-prod img{
     width:100%;
     height:100%;
 }
+
 .price{
     background-color:white;
     color: rgb(167, 157, 157);
@@ -97,12 +108,15 @@ margin: 0px 5px;
     width:50px;
     height:auto;
 }
+
 .offcanvas{
     --bs-offcanvas-width:500px;
 }
+
 .offcanvas .btn i{
     color:#fff;
 }
+
 .heart i{
     color:red;
 }
