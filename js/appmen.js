@@ -57,6 +57,8 @@ var men = [
     },
 ];
 
+var price = { 'S': 700, 'M': 800, 'L': 900, 'XL': 1000, 'XXL': 1100 };
+
 function myfunction1() {
     var htmlelement = "";
     for (var i = 0; i < men.length; i++) {
@@ -66,9 +68,10 @@ function myfunction1() {
             + '<div class="card-body">'
             + '<h5 class="card-title">' + men[i].h6 + '</h5>'
             + '<h6>' + men[i].p + '<h6>'
-            + '<em>' + "$" + men[i].price + '</em>'
-            + '<br>'
-            + '<select>'
+            //+ '<em>' + "$" + men[i].price + '</em>'
+            //+ '<br>'
+            // +'<form name="form">'
+            + '<select data-size="' + i + '" data-id="' +i+ '" onchange="getSize(this)">'
             + '<option>' + "Size" + '</option>'
             + '<option>' + "S" + '</option>'
             + '<option>' + "M" + '</option>'
@@ -76,8 +79,11 @@ function myfunction1() {
             + '<option>' + "XL" + '</option>'
             + '<option>' + "XXL" + '</option>'
             + '</select>'
+            // +'</form>'
             + '<br>'
-            + '<button class="btn btn-sm btn-primary" onclick="addToCart1(this)" data-button-id="'+i+'" data-price="' + men[i].price + '"  data-src="' + men[i].url + '" data-para="' + men[i].h6 + '">' + men[i].pr + '</button>'
+            + '<em class="price">' + '</em>'
+            + '<br>'
+            + '<button class="btn btn-sm btn-primary" onclick="addToCart1(this);" data-size="' + i + '" data-button-id="' + i + '" data-price="' + men[i].price + '"  data-src="' + men[i].url + '" data-para="' + men[i].h6 + '">' + men[i].pr + '</button>'
             + '</div>'
             + '</div>'
             + '</div>';
@@ -85,16 +91,22 @@ function myfunction1() {
     }
 }
 
-// var button = document.getElementsByClassName('btn-primary');
+// document.getElementsByClassName('addToCart').addEventListener('click',function (item){
+//     console.log(item);
+// });
+//var button = document.querySelectorAll('.addToCart');
 // var div2 = document.getElementById('div2');
 // var cartcount = document.getElementById("lblCartCount");
+// console.log(button);
+// button.forEach(element => {
+//     console.log(element);
+//     element.addEventListener('click',function testing(item){
+//             console.log(item);
+//         });
+// });
+
 var count = 0;
 let sum = 0;
-
-// for (var i = 0; i < button.length; i++) {
-//     addToCart1();
-// }
-
 function addToCart(item) {
     // btn = item.dataset.buttonId;
     // console.log(btn);
@@ -106,21 +118,21 @@ function addToCart(item) {
     document.getElementById('lblCartCount').innerText = count;
     var itemName = item.dataset.para;
     var itemImg = item.dataset.src;
-    var price= item.dataset.price;
-    sum=sum+parseInt(price);
+    var price = item.dataset.price;
+    sum = sum + parseInt(price);
     console.log(sum);
     console.log(itemImg);
-    var htmlelement=document.createElement('tr');
-    htmlelement.innerHTML='<tr>'
-        +'<td>'
+    var htmlelement = document.createElement('tr');
+    htmlelement.innerHTML = '<tr>'
+        + '<td>'
         + '<div class="product-img">'
         + '<div class="img-prod">'
-        + '<img src="'+itemImg+'">'
+        + '<img src="' + itemImg + '">'
         + '</div>'
         + '</div>'
         + '</td>'
-        +'<td>'
-        + '<p>'+itemName+'</p>'
+        + '<td>'
+        + '<p>' + itemName + '</p>'
         + '</td>'
         + '<td>'
         + '<div class="button-container">'
@@ -129,43 +141,54 @@ function addToCart(item) {
         + '<button class="cart-qty-minus" type="button" value="-">' + "-" + '</button>'
         + '</div>'
         + '</td>'
-        +'<td>'
-        + '<input type="text" value="'+price+'" class="price form-control-sm" disabled>'
+        + '<td>'
+        + '<input type="text" value="' + price + '" class="price form-control-sm" disabled>'
         + '</td>'
         + '<td text-align="center">'
         + '<span id="amount" class="amount">' + price + '</span>'
         + '</td>'
-        +'</tr>';
+        + '</tr>';
     var div2 = document.getElementById('div2');
     div2.append(htmlelement);
-    document.getElementById('total').innerHTML=sum;
+    document.getElementById('total').innerHTML = sum;
+}
+
+var size = document.querySelectorAll('select');
+//console.log(size);
+var pr,size;
+const em=document.getElementsByClassName('em')
+function getSize(item) {
+    //console.log(item.dataset.size);
+    //console.log(item.value);
+    pr = price[item.value];
+    //console.log(item.dataset.id);
+    size=item.value;
 }
 
 //localStorage.clear();
 function addToCart1(item) {
-    //btn = item.dataset.src;
-    //console.log(btn);
     let items = [];
     if (typeof (Storage) !== 'undefined') {
-        var itemSrc = item.dataset.src;
-        var itemName = item.dataset.para;
-        var itemPr = item.dataset.price;
         let cartitem = {
-            id:item.dataset.buttonId,
-            itemSrc: itemSrc,
-            itemName: itemName,
-            itemPr: itemPr,
+            id: item.dataset.buttonId,
+            itemSrc: item.dataset.src,
+            itemName: item.dataset.para,
+            itemSize:size,
+            itemPr: pr,
             no: 1
         };
+        //console.log(cartitem);
+        //localStorage.setItem('items', JSON.stringify(cartitem));
         if (JSON.parse(localStorage.getItem('items') === null)) {
             items.push(cartitem);
             localStorage.setItem('items', JSON.stringify(cartitem));
             window.location.reload();
         }
         else {
-            const localItems = JSON.parse(localStorage.getItem("items"));
-            localItems.map(data => {
-                if(cartitem.id == data.id) {
+            const localitems = JSON.parse(localStorage.getItem('items'));
+        //     console.log(localitems);
+            localitems.map(data => {
+                if (cartitem.id == data.id) {
                     cartitem.no = data.no + 1;
                 } else {
                     items.push(data);
@@ -175,6 +198,9 @@ function addToCart1(item) {
             localStorage.setItem('items', JSON.stringify(items));
             window.location.reload();
         }
+    }
+    else{
+        console.log("local Storage not Working");
     }
 }
 

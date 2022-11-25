@@ -2,173 +2,175 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/menstyle.css">
-    <!-- <link href="/css/cart.css"> -->
-    <script src="/js/appmen.js"></script>
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/menstyle.css">
+  
+  <!-- <link href="/css/cart.css"> -->
+
+
 </head>
 
 <body onload="myfunction1();">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container">
-          <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="#">
-            <span class="text-uppercase ms-2">MyShop.com</span>
-          </a>
-          <div class="order-lg-1">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
-              <li class="nav-item px-2 py-2">
-                <a class="nav-link " aria-current="page" href="/index.html">Home</a>
-              </li>
-              <li class="nav-item px-2 py-2">
-                <a class="nav-link" aria-current="page" href="#">Collections</a>
-              </li>
-              <li class="nav-item px-2 py-2">
-                <div class="dropdown d-inline-block justify-content-center align-items-center">
-                  <a class="btn btn-muted dropdown-toggle text-muted" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Shop Now
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/views/kids.html">Kids</a></li>
-                    <li><a class="dropdown-item" href="/views/women.html">Women</a></li>
-                    <li><a class="dropdown-item" href="/views/men.html">Men</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="nav-item px-2 py-2">
-                <a class="nav-link" aria-current="page">Contact-Us</a>
-              </li>
-            </ul>
-            <div class="d-block me-auto mb-2 mb-lg-0 text-center">
-              <button type="button" class="btn">
-                <a href="/views/login.html"><i class="fa fa-user fa-x"></i></a>
-              </button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="#">
+        <span class="text-uppercase ms-2">MyShop.com</span>
+      </a>
+      <div class="order-lg-1">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item px-2 py-2">
+            <a class="nav-link " aria-current="page" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item px-2 py-2">
+            <a class="nav-link" aria-current="page" href="#">Collections</a>
+          </li>
+          <li class="nav-item px-2 py-2">
+            <div class="dropdown d-inline-block justify-content-center align-items-center">
+              <a class="btn btn-muted dropdown-toggle text-muted" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Shop Now
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/views/kids.html">Kids</a></li>
+                <li><a class="dropdown-item" href="/views/women.html">Women</a></li>
+                <li><a class="dropdown-item" href="/views/men.html">Men</a></li>
+              </ul>
             </div>
-            <div class="d-block me-auto mb-2 mb-lg-0 text-center">
-    
-              <!-- toggler Effect -->
-    
-              <!-- <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" -->
-                <!-- aria-controls="offcanvasExample"> -->
-                <a href="/views/cart.html">
-                <i class="fa fa-shopping-cart fa-x"></i>
-                </a>
-                <span id="lblCartCount"></span>
-              </button>
-            </div>
-            <form class="d-flex ms-2" role="search">
-              <input class="form-control  form-control-sm me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-sm btn-outline-muted" type="submit" style="color:rgb(0, 0, 0)"><i
-                  class="fa fa-search"></i></button>
-            </form>
-          </div>
+          </li>
+          <li class="nav-item px-2 py-2">
+            <a class="nav-link" aria-current="page">Contact-Us</a>
+          </li>
+        </ul>
+        <div class="d-block me-auto mb-2 mb-lg-0 text-center">
+          <button type="button" class="btn">
+            <a href="/views/login.html"><i class="fa fa-user fa-x"></i></a>
+          </button>
         </div>
-      </nav>
+        <div class="d-block me-auto mb-2 mb-lg-0 text-center">
 
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title fw-light" id="offcanvasExampleLabel">Your Product</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <!-- toggler Effect -->
+
+          <!-- <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" -->
+          <!-- aria-controls="offcanvasExample"> -->
+          <a href="/views/cart.html">
+            <i class="fa fa-shopping-cart fa-x"></i>
+          </a>
+          <span id="lblCartCount"></span>
+          </button>
         </div>
-        <div class="offcanvas-body">
-            <!-- <div id="div3">
+        <form class="d-flex ms-2" role="search">
+          <input class="form-control  form-control-sm me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-sm btn-outline-muted" type="submit" style="color:rgb(0, 0, 0)"><i
+              class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-light" id="offcanvasExampleLabel">Your Product</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- <div id="div3">
             </div>  -->
 
-            <div class="container">
-                <h1 class="mb-3 text-center fw-lighter">
-                    Shopping Cart
-                </h1>
-                <table class="table table-striped" cellspacing="10" cellpadding="10">
-                    <thead class="fw-light text-muted">
-                        <tr>
-                            <th class="">Product</th>
-                            <th class="">Name</th>
-                            <th class="">Quantity</th>
-                            <th class="">Price</th>
-                            <th class="text-right">
-                                <span id="amount" class="amount">
-                                    Amount
-                                </span>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody id="div2">
+      <div class="container">
+        <h1 class="mb-3 text-center fw-lighter">
+          Shopping Cart
+        </h1>
+        <table class="table table-striped" cellspacing="10" cellpadding="10">
+          <thead class="fw-light text-muted">
+            <tr>
+              <th class="">Product</th>
+              <th class="">Name</th>
+              <th class="">Quantity</th>
+              <th class="">Price</th>
+              <th class="text-right">
+                <span id="amount" class="amount">
+                  Amount
+                </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="div2">
 
-                    </tbody>
-                    <tfoot>
-                        <td colspan="3"></td>
-                        <td text-align="right">
-                            <strong>Total = $<span id="total" class="total"></span></strong>
-                        </td>
-                    </tfoot>
-                </table>
-            </div>
-            <a href="/proceedtoviews/cart.html">
-                <button type="button" class="btn btn-primary">
-                    <i class="fa fa-shopping-cart">&nbsp;</i>
-                    CheckOut
-                </button>
-            </a>
-        </div>
+          </tbody>
+          <tfoot>
+            <td colspan="3"></td>
+            <td text-align="right">
+              <strong>Total = $<span id="total" class="total"></span></strong>
+            </td>
+          </tfoot>
+        </table>
+      </div>
+      <a href="/proceedtoviews/cart.html">
+        <button type="button" class="btn btn-primary">
+          <i class="fa fa-shopping-cart">&nbsp;</i>
+          CheckOut
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="div1" class="row">
+    </div>
+  </div>
+
+  <footer class="mt-5">
+    <div class="row text-light">
+      <div class="col-lg-6 mt-4">
+        <ul>
+          <li>HOME</li>
+          <li>COLLECTIONS</li>
+          <li>NEW FEATURES</li>
+          <li>SPECIAL</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 mt-4">
+        <ul>
+          <li>
+            <i class="fa fa-envelope ">&nbsp;&nbsp;</i>
+            myshop@gmail.com
+          </li>
+          <li>
+            <i class="fa fa-instagram">&nbsp;&nbsp;</i>
+            myshop.insta
+          </li>
+          <li>
+            <i class="fa fa-twitter">&nbsp;&nbsp;</i>
+            myshop_tweet
+          </li>
+          <li>
+            <i class="fa fa-facebook">&nbsp;&nbsp;</i>
+            myshop.com
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div class="container">
-        <div id="div1" class="row">
-        </div>
-    </div>
+  </footer>
 
-    <footer class="mt-5">
-        <div class="row text-light">
-            <div class="col-lg-6 mt-4">
-                <ul>
-                    <li>HOME</li>
-                    <li>COLLECTIONS</li>
-                    <li>NEW FEATURES</li>
-                    <li>SPECIAL</li>
-                </ul>
-            </div>
-            <div class="col-lg-6 mt-4">
-                <ul>
-                    <li>
-                        <i class="fa fa-envelope ">&nbsp;&nbsp;</i>
-                        myshop@gmail.com
-                    </li>
-                    <li>
-                        <i class="fa fa-instagram">&nbsp;&nbsp;</i>
-                        myshop.insta
-                    </li>
-                    <li>
-                        <i class="fa fa-twitter">&nbsp;&nbsp;</i>
-                        myshop_tweet
-                    </li>
-                    <li>
-                        <i class="fa fa-facebook">&nbsp;&nbsp;</i>
-                        myshop.com
-                    </li>
-                </ul>
-            </div>
-        </div>
 
-    </footer>
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script src="/js/appmen.js"></script>
 
 </body>
 

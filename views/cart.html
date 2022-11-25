@@ -84,6 +84,7 @@
                 <tr>
                     <th class="scope">Product</th>
                     <th class="scope">Name</th>
+                    <th class="scope">Size</th>
                     <th class="scope">Quantity</th>
                     <th class="scope">Price</th>
                     <th class="text-right scope">
@@ -98,7 +99,7 @@
                 
             </tbody>
             <tfoot>
-                <td colspan="5"></td>
+                <td colspan="6"></td>
                 <td text-align="right">
                     <strong>Total = $<span id="total" class="total"></span></strong>
                 </td>
@@ -111,7 +112,7 @@
                 <div class="col-lg-1">
                 </div>
                 <div class="col-lg-10 px-5">
-                    <h1 class="mt-2 fw-light">Proceed To Cart</h1>
+                    <h1 class="mt-2 fw-light justify-content-center">Fill Details</h1>
                     <form action="/" method="POST" id="form">
                         <div class="row">
                             <div class="col-12 col-lg-6">
@@ -138,11 +139,11 @@
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <textarea type="text" placeholder="Full Address" class="form-control my-2 p-2"
-                                    id="Email" required></textarea>
+                                    id="address" required></textarea>
                             </div>
 
                             <div class="col-12 col-lg-6">
-                                <input type="text" placeholder="pincode" class="form-control my-2 p-2" id="Email"
+                                <input type="text" placeholder="pincode" class="form-control my-2 p-2" id="pincode"
                                     required>
                             </div>
                         </div>
@@ -160,7 +161,7 @@
             </div>
         </div>
         </div>
-    </section>
+    </section>/
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
