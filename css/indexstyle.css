@@ -4,9 +4,27 @@
   height: 30px;
 }
 
+.itemofdropdown li a {
+  color: #000;
+}
+
+.itemofdropdown a:hover {
+  background-color: rgb(165, 157, 157);
+}
+
 .midsection a {
   color: #fff;
   background-color: rgb(62, 12, 109);
+}
+
+.midsectionimg {
+  width: 200px;
+  height: 100px;
+}
+
+.imgshop {
+  width: 100px;
+  height: 200px;
 }
 
 .foot {
@@ -26,10 +44,6 @@
 .nav a {
   text-decoration: none;
   color: rgb(165, 157, 157);
-}
-
-a:hover {
-  color: rgb(233, 188, 40);
 }
 
 #shopnow {
@@ -61,7 +75,7 @@ a:hover {
 }
 
 @media only screen and (min-width: 280px) and (max-width: 500px) {
-  img {
+  .midsectionimg {
     width: 350px;
     height: 300px;
   }
@@ -84,7 +98,7 @@ a:hover {
 }
 
 @media only screen and (min-width: 900px) and (max-width: 2000px) {
-  img {
+  .midsectionimg {
     width: 1300px;
     height: 400px;
   }

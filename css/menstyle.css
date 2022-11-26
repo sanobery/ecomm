@@ -3,13 +3,12 @@
 }
 
 #div1 {
-  /* background-color: #b8c2bd; */
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-img {
+.imgsize {
   height: 200px;
   width: 200px;
 }
@@ -24,7 +23,6 @@ img {
 #lblCartCount {
   font-size: 0.8rem;
   background: rgb(223, 162, 162);
-  /* background: transparent; */
   color: rgb(175, 23, 23);
   border-radius: 50%;
   padding: 0 5px;
@@ -33,12 +31,11 @@ img {
   margin-top: -5px;
 }
 
-ul li {
+.foot ul li {
   list-style-type: none;
 }
 
-a,
-i {
+.font {
   color: rgb(167, 157, 157);
 }
 
@@ -50,10 +47,6 @@ i {
 
 #offcanvasExampleLabel {
   color: rgb(175, 23, 23);
-}
-
-h1 {
-  color: rgb(167, 157, 157);
 }
 
 .table tr,
@@ -76,16 +69,6 @@ h1 {
 #mytable .form-control {
   display: inline-block;
   width: auto;
-}
-
-.cart-qty-plus,
-.cart-qty-minus {
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  color: rgb(167, 157, 157);
-  border-radius: 50%;
-  border: 1px solid rgb(167, 157, 157);
 }
 
 .img-prod {
@@ -113,12 +96,4 @@ h1 {
 
 .offcanvas .btn i {
   color: #fff;
-}
-
-.heart i {
-  color: red;
-}
-
-em {
-  color: red;
 }

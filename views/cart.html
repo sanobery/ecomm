@@ -17,63 +17,96 @@
     <!-- Navbar of page -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
-            <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="#">
-                <span class="text-uppercase ms-2">MyShop.com</span>
-            </a>
-            <div class="order-lg-1">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
-                    <li class="nav-item px-2 py-2">
-                        <a class="nav-link " aria-current="page" href="/index.html">Home</a>
+          <a
+            class="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
+            href="#"
+          >
+            <span class="text-uppercase ms-2">MyShop.com</span>
+          </a>
+          <div class="order-lg-1">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div
+            class="collapse navbar-collapse order-lg-1"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+              <li class="nav-item px-2 py-2">
+                <a class="nav-link" aria-current="page" href="/index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item px-2 py-2">
+                <a class="nav-link" aria-current="page" href="#">Collections</a>
+              </li>
+              <li class="nav-item px-2 py-2">
+                <div
+                  class="dropdown d-inline-block justify-content-center align-items-center"
+                >
+                  <a
+                    class="btn btn-muted dropdown-toggle text-muted"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Shop Now
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="/views/kids.html">Kids</a>
                     </li>
-                    <li class="nav-item px-2 py-2">
-                        <a class="nav-link" aria-current="page" href="/views/women.html">Collections</a>
+                    <li>
+                      <a class="dropdown-item" href="/views/women.html">Women</a>
                     </li>
-                    <li class="nav-item px-2 py-2">
-                        <div class="dropdown d-inline-block justify-content-center align-items-center">
-                            <a class="btn btn-muted dropdown-toggle text-muted" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Shop Now
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/views/kids.html">Kids</a></li>
-                                <li><a class="dropdown-item" href="/views/women.html">Women</a></li>
-                                <li><a class="dropdown-item" href="/views/men.html">Men</a></li>
-                            </ul>
-                        </div>
+                    <li>
+                      <a class="dropdown-item" href="/views/men.html">Men</a>
                     </li>
-                    <li class="nav-item px-2 py-2">
-                        <a class="nav-link" aria-current="page">Contact-Us</a>
-                    </li>
-                </ul>
-                <div class="d-block me-auto mb-2 mb-lg-0 text-center">
-                    <button type="button" class="btn">
-                        <a href="/views/login.html">
-                            <i class="fa fa-user">
-                            </i>
-                        </a>
-                    </button>
+                  </ul>
                 </div>
-                <div class="d-block me-auto mb-2 mb-lg-0 text-center">
-                    <button type="button" class="btn">
-                        <i class="fa fa-shopping-cart"></i>
-                    </button>
-                </div>
-                <form class="d-flex ms-2" role="search">
-                    <input class="form-control  form-control-sm me-2" type="search" placeholder="Search"
-                        aria-label="Search">
-                    <button class="btn btn-sm btn-outline-muted" type="submit"><i class="fa fa-search"></i></button>
-                </form>
+              </li>
+              <li class="nav-item px-2 py-2">
+                <a class="nav-link" aria-current="page">Contact-Us</a>
+              </li>
+            </ul>
+            <div class="d-block me-auto mb-2 mb-lg-0 text-center">
+              <button type="button" class="btn">
+                <a href="/views/login.html"
+                  ><i class="fa fa-user fa-x font"></i
+                ></a>
+              </button>
             </div>
+            <div class="d-block me-auto mb-2 mb-lg-0 text-center">
+              <a href="/views/cart.html">
+                <i class="fa fa-shopping-cart fa-x font"></i>
+              </a>
+              <span id="lblCartCount"></span>
+            </div>
+            <form class="d-flex ms-2" role="search">
+              <input
+                class="form-control form-control-sm me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-sm btn-outline-muted" type="submit">
+                <i class="fa fa-search font"></i>
+              </button>
+            </form>
+          </div>
         </div>
-    </nav>
-
+      </nav>
+  
     <!-- Item from Local Storage with Dyanmic Function of size, price and quantity -->
     <div id="imgcont">
     </div>

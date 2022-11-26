@@ -1,4 +1,7 @@
 // Dynamic item creation
+var size = "",
+  price;
+
 var colour = document.getElementById("colours");
 function myFunction() {
   var filterhtml = "";
@@ -21,7 +24,7 @@ function myFunction() {
       '<div class="card cardinline">' +
       '<img src="' +
       product[i].url +
-      '" class="card-img-top img img-responsive" alt="..." >' +
+      '" class="card-img-top img-responsive imgsize" alt="..." >' +
       '<div class="card-body">' +
       '<h5 class="card-title">' +
       product[i].h6 +
@@ -75,7 +78,7 @@ function myFunction() {
 
 // To get size
 function getSize(item) {
-  pr = price[item.value];
+  price = price[item.value];
   size = item.value;
 }
 
@@ -130,7 +133,7 @@ function newPage(women) {
       '<div class="card cardinline">' +
       '<img src="' +
       women[i].url +
-      '" class="card-img-top img img-responsive" alt="..." >' +
+      '" class="card-img-top img-responsive imgsize" alt="..." >' +
       '<div class="card-body">' +
       '<h5 class="card-title">' +
       women[i].h6 +

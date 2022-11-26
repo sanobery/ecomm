@@ -66,4 +66,4 @@ var price = { S: 700, M: 800, L: 900, XL: 1000, XXL: 1100 };
 
 var count = 0;
 let sum = 0;
-var pr, size;
+var price, size;

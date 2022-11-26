@@ -6,7 +6,7 @@ function addToCart(item) {
       itemSrc: item.dataset.src,
       itemName: item.dataset.para,
       itemSize: size,
-      itemPrice: pr,
+      itemPrice: price,
       no: 1,
     };
     if (JSON.parse(localStorage.getItem("items") === null)) {

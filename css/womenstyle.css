@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-img {
+.imgsize {
   height: 200px;
   width: 200px;
 }
@@ -31,12 +31,11 @@ img {
   margin-top: -5px;
 }
 
-ul li {
+.foot ul li {
   list-style-type: none;
 }
 
-a,
-i {
+.font {
   color: rgb(167, 157, 157);
 }
 
@@ -48,10 +47,6 @@ i {
 
 #offcanvasExampleLabel {
   color: rgb(175, 23, 23);
-}
-
-h1 {
-  color: rgb(167, 157, 157);
 }
 
 .table tr,
@@ -111,8 +106,4 @@ h1 {
 
 .offcanvas .btn i {
   color: #fff;
-}
-
-em {
-  color: red;
 }

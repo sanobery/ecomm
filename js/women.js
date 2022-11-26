@@ -65,4 +65,4 @@ var filtercolour = [
 var filterbrand = ["Harpa", "Siril", "Lymio", "Biba", "MySwag", "Max"];
 
 var size = "",
-  pr;
+  price;
