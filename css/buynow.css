@@ -1,8 +1,8 @@
-body{
-    background-image:  linear-gradient(rgb(250, 201, 66),#fff);
-    background-repeat: no-repeat;
+body {
+  background-image: linear-gradient(rgb(250, 201, 66), #fff);
+  background-repeat: no-repeat;
 }
 
-h3{
-    color:rgb(223, 76, 66);
+h3 {
+  color: rgb(223, 76, 66);
 }

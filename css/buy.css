@@ -1,63 +1,63 @@
 select {
-    border-radius: 5px;
-    box-shadow: inset 1px 2px 2px 1px rgb(233, 219, 219);
+  border-radius: 5px;
+  box-shadow: inset 1px 2px 2px 1px rgb(233, 219, 219);
 }
 
 #price {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 h5 {
-    color: rgb(204, 22, 22);
+  color: rgb(204, 22, 22);
 }
 
 em {
-    color: rgb(204, 22, 22);
+  color: rgb(204, 22, 22);
 }
 
 #lblCartCount {
-    font-size: 0.8rem;
-    background:rgb(223, 162, 162);
-    /* background: transparent; */
-    color: rgb(175, 23, 23);
-    border-radius: 50%;
-    padding: 0 5px;
-    vertical-align: top;
-    margin-left:-2px;
-    margin-top: -5px;
+  font-size: 0.8rem;
+  background: rgb(223, 162, 162);
+  /* background: transparent; */
+  color: rgb(175, 23, 23);
+  border-radius: 50%;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -2px;
+  margin-top: -5px;
 }
 
-#div1{
-    margin-bottom: 10px;
+#div1 {
+  margin-bottom: 10px;
 }
 
-a{
-    color:#fff;
+a {
+  color: #fff;
 }
 
-a:hover{
-    color:white;
-    font-size: 20px;
+a:hover {
+  color: white;
+  font-size: 20px;
 }
 
-h6{
-    margin-left:30px;
-    color: rgb(204, 22, 22);
+h6 {
+  margin-left: 30px;
+  color: rgb(204, 22, 22);
 }
 
-.cart{
-    background-color: aqua;
-    width:250px;
-    text-align: center;
-    height: 500px;
-    overflow-y: scroll;
+.cart {
+  background-color: aqua;
+  width: 250px;
+  text-align: center;
+  height: 500px;
+  overflow-y: scroll;
 }
 
-.cartImg{
-    width:auto;
-    height:200px;
+.cartImg {
+  width: auto;
+  height: 200px;
 }
 
-.hoverchangecolor{
-    color:black;
+.hoverchangecolor {
+  color: black;
 }

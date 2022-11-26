@@ -1,4 +1,3 @@
-const form=document.getElementById('form');
+const form = document.getElementById("form");
 
-form.addEventListener('submit',function click(){    
-})
+form.addEventListener("submit", function click() {});
