@@ -1,7 +1,6 @@
 // Dynamic item creation
 var size = "",
   price;
-
 var colour = document.getElementById("colours");
 function myFunction() {
   var filterhtml = "";
@@ -78,20 +77,21 @@ function myFunction() {
 
 // To get size
 function getSize(item) {
-  price = price[item.value];
   size = item.value;
+  price = product[item.dataset.id].itemprice[size];
 }
+ 
 
 // filter out element as per selected colour
 document.addEventListener("DOMContentLoaded", function () {
-  var check = document.getElementsByClassName("flexCheck");
-  console.log(check);
+  //console.log(check);
+  var check=document.getElementsByClassName('flexCheck');
+  for(var i=0;i<check.length;i++){
+  console.log(check[i]); 
+  }
 });
-//   for(var i=0;i<check.length;i++){
-//     if (check.checked == true) {
-//   console.log(check[i]);
-//     }
-//   }
+
+//docum;
 //  document.getElementsByClassName('flexCheck').addEventListener('click', function (e) {
 //   console.log(e.target);
 // if (check.checked == true) {
@@ -104,9 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
 //   myFunction();
 // }
 //});
-//});
+
 function filter(check) {
-  console.log(check);
   if (check.checked == true) {
     window.history.pushState(null, null, "?colour=" + check.dataset.colour);
     var selectedcolour = product.filter(
@@ -119,27 +118,22 @@ function filter(check) {
   }
 }
 
-// document.body.addEventListener('click', function (event) {
-//   console.log(event.target.classList);
-//   console.log(document.querySelectorAll('checkfilter'));
-// });
-
 // Selected colour item
-function newPage(women) {
+function newPage(productselected) {
   var htmlelement = "";
-  for (var i = 0; i < women.length; i++) {
+  for (var i = 0; i < productselected.length; i++) {
     htmlelement +=
       '<div class="col-12 col-lg-3">' +
       '<div class="card cardinline">' +
       '<img src="' +
-      women[i].url +
+      productselected[i].url +
       '" class="card-img-top img-responsive imgsize" alt="..." >' +
       '<div class="card-body">' +
       '<h5 class="card-title">' +
-      women[i].h6 +
+      productselected[i].h6 +
       "</h5>" +
       "<h6>" +
-      women[i].p +
+      productselected[i].p +
       "<h6>" +
       '<select data-size="' +
       i +
@@ -168,17 +162,17 @@ function newPage(women) {
       "<br>" +
       "<br>" +
       '<button class="btn btn-sm btn-primary" onclick="addToCart(this)" data-price="' +
-      women[i].price +
+      productselected[i].price +
       '"  data-src="' +
-      women[i].url +
+      productselected[i].url +
       '" data-para="' +
-      women[i].h6 +
+      productselected[i].h6 +
       '">' +
-      women[i].pr +
+      productselected[i].pr +
       "</button>" +
       "</div>" +
       "</div>" +
-      "</div>";
-    div1.innerHTML = htmlelement;
+      "</div>"; 
   }
+  div1.innerHTML = htmlelement;
 }
