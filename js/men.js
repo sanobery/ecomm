@@ -1,16 +1,4 @@
-var filtercolour = [
-  "Black",
-  "Blue",
-  "Green",
-  "Orange",
-  "Red",
-  "White",
-  "Yellow",
-  "Pink",
-];
-
-var filterbrand = ["Harpa", "Siril", "Lymio", "Biba", "MySwag", "Max"];
-
+// men product details
 var product = [
   {
     url: "/assets/men1.jpeg",

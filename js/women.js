@@ -56,16 +56,3 @@ var product = [
     itemprice:  { "S": 700, "M": 800, "L": 900, "XL": 1000, "XXL": 1100 },
   },
 ];
-
-var filtercolour = [
-  "Black",
-  "Blue",
-  "Green",
-  "Orange",
-  "Red",
-  "White",
-  "Yellow",
-  "Pink",
-];
-
-var filterbrand = ["Harpa", "Siril", "Lymio", "Biba", "MySwag", "Max"];

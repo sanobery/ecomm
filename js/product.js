@@ -1,7 +1,22 @@
-// Dynamic item creation
-var size = "",
-  price;
+// variable required for product filtering like brands & Colour
+var filtercolour = [
+  "Black",
+  "Blue",
+  "Green",
+  "Orange",
+  "Red",
+  "White",
+  "Yellow",
+  "Pink",
+];
+
+var filterbrand = ["Harpa", "Siril", "Lymio", "Biba", "MySwag", "Max"];
+
+var size = "",price;
+
 var colour = document.getElementById("colours");
+
+// Dynamic item creation
 function myFunction() {
   var filterhtml = "";
   for (var i = 0; i < filtercolour.length; i++) {
@@ -83,8 +98,10 @@ function getSize(item) {
  
 
 // filter out element as per selected colour
-document.addEventListener("DOMContentLoaded", function () {
+document.body.addEventListener("DOMContentLoaded", function () {
   //console.log(check);
+  var c=document.getElementsByClassName('flexCheck');
+  console.log(c);   
   var check=document.getElementsByClassName('flexCheck');
   for(var i=0;i<check.length;i++){
   console.log(check[i]); 

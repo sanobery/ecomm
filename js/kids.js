@@ -1,16 +1,4 @@
-var filtercolour = [
-  "Black",
-  "Blue",
-  "Green",
-  "Orange",
-  "Red",
-  "White",
-  "Yellow",
-  "Pink",
-];
-
-var filterbrand = ["Harpa", "Siril", "Lymio", "Biba", "MySwag", "Max"];
-
+// kids product details
 var product = [
   {
     url: "/assets/kids.jpeg",
