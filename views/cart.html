@@ -141,12 +141,12 @@
             <div class="row">
               <div class="col-12 col-lg-6">
                 <input type="text" placeholder="email@xyz.com" class="form-control my-2 p-2 formelement" id="email"
-                  name="email" data-validate="required|emailCheck|max:40">
+                  name="email" data-validate="required|emailCheck|min:10|max:40">
                 <span class="error text-danger" id="emailError" name="error"></span>
               </div>
               <div class="col-12 col-lg-6">
                 <input type="text" placeholder="********" class="form-control my-2 p-2 formelement" id="password"
-                  name="password" data-validate="required|passwordCheck|min:8|max:30">
+                  name="password" data-validate="required|passwordCheck|min:8|max:25">
                 <span class="error text-danger" id="passwordError" name="error"></span>
               </div>
             </div>
@@ -154,72 +154,7 @@
             <div class="row">
               <div class="col-12 col-lg-6">
                 <textarea type="text" placeholder="Full Address" class="form-control my-2 p-2 formelement" id="address"
-                  name="address" data-validate="required|max:30"></textarea>
-                <span class="error text-danger" id="addressError" name="error"></span>
-              </div>
-              <div class="col-12 col-lg-6">
-                <input type="text" placeholder="pincode" class="form-control my-2 p-2 formelement" id="pincode"
-                  name="pincode" data-validate="required|numeric|min:6">
-                <span class="error text-danger" id="pincodeError" name="error"></span>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-lg-2">
-              </div>
-              <div class="col-lg-8">
-                <span id="buttonError"></span>
-                <button type="submit" id="btn" name="submit"
-                  class="btn btn-outline-primary my-2 p-2 form-control">Check-Out</button>
-              </div>
-            </div class="col-lg-2">
-        </div>
-        </form>
-      </div>
-    </div>
-    </div>
-    </div>
-  </section>
-
-  <section class="form my-4 mx-5">
-    <div class="container mt-5">
-      <div class="row row-no-gutters">
-        <div class="col-lg-1">
-        </div>
-        <div class="col-12 col-lg-10 px-5">
-          <h1 class="mt-2 fw-light justify-content-center">Fill Details</h1>
-          <form action="#" method="post" id="form" name="form" data-form="1">
-
-            <div class="row">
-              <div class="col-12 col-lg-6">
-                <input type="text" placeholder="First-Name" class="form-control my-2 p-2 formelement" id="firstName"
-                  name="firstName" data-validate="required|isAlpha|min:3|max:20">
-                <span class="error text-danger" class="errorDisplay" name="error"></span>
-              </div>
-              <div class="col-12 col-lg-6">
-                <input type="text" placeholder="Last-Name" class="form-control my-2 p-2 formelement" id="lastName"
-                  name="lastName" data-validate="required|isAlpha|min:3|max:20">
-                <span class="error text-danger" class="errorDisplay" name="error"></span>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-12 col-lg-6">
-                <input type="text" placeholder="email@xyz.com" class="form-control my-2 p-2 formelement" id="email"
-                  name="email" data-validate="required|emailCheck|max:20">
-                <span class="error text-danger" id="emailError" name="error"></span>
-              </div>
-              <div class="col-12 col-lg-6">
-                <input type="text" placeholder="********" class="form-control my-2 p-2 formelement" id="password"
-                  name="password" data-validate="required|passwordCheck|min:8|max:30">
-                <span class="error text-danger" id="passwordError" name="error"></span>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-12 col-lg-6">
-                <textarea type="text" placeholder="Full Address" class="form-control my-2 p-2 formelement" id="address"
-                  name="address" data-validate="required|max:30"></textarea>
+                  name="address" data-validate="required|max:50"></textarea>
                 <span class="error text-danger" id="addressError" name="error"></span>
               </div>
               <div class="col-12 col-lg-6">

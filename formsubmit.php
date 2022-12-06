@@ -2,10 +2,10 @@
 <?php
   $firstname=$_POST['firstName'];
   $lastname=$_POST['lastName'];
-  $emailid=$_POST['Email'];
-  $password=$_POST['Password'];
-  $address=$_POST['Address'];
-  $pincode=$_POST['Pincode'];
+  $emailid=$_POST['email'];
+  $password=$_POST['password'];
+  $address=$_POST['address'];
+  $pincode=$_POST['pincode'];
   echo "<table>".
   "<tr>".
     "<th>First-Name</th>".
@@ -24,4 +24,10 @@
     "<td>".$pincode."</td>".
   "</tr>".
 "</table>";
-?>
+
+// $arr=date('Y-M-d');
+// echo($arr);
+// setcookie('user','sanober',time()+34600,"/");
+// setcookie('user','shahid',time()+3600,"/");
+
+?> 
