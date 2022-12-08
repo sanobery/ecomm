@@ -31,7 +31,5 @@ function addToCart(item) {
       localStorage.setItem("items", JSON.stringify(items));
       window.location.reload();
     }
-  } else {
-    console.log("local Storage not Working");
   }
 }
