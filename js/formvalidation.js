@@ -1,8 +1,9 @@
 //Customer Details validation
 var msg = {};
 document.getElementById('form').addEventListener('submit', function validate(event) {
-  //event.preventDefault();
+  event.preventDefault();
   const formdata = document.getElementsByClassName('formelement');
+  console.log(formdata);
   const error = document.getElementsByName('error');
   for (var i = 0; i < formdata.length; i++) {
     msg[formdata[i].name] = new Array();

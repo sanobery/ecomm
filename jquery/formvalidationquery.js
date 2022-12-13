@@ -20,7 +20,6 @@ $(document).ready(function () {
       }
     });
     displayError();
-    console.log(valid);
     if (valid) {
       $('#form')[0].submit();
     }
@@ -85,7 +84,7 @@ function numeric(name, item) {
 
 // passwordCheck()- To check Specific format in password entered by user
 function passwordCheck(name, item) {
-  var passwordcheck = /^\b[A-Z][A-Za-z0-9!@#$%&*?]{8,}$/;
+  var passwordcheck = /^\b[A-Z][A-Za-z0-9!@#$%&*?]{3,}$/;
   if (!(passwordcheck.test(item))) {
     msg[name].push("**must have atleast 1 Capital Letter & 1 Special Character and a number <br>");
   }
