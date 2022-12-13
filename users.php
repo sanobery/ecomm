@@ -1,11 +1,16 @@
 <?php
   require_once('./databaseconnect.php');
 
-  $obj   = new DatabaseConnect();
-  $table = $obj->connection();
-  //var_dump($table);
-  //$colname=$obj->columnname($table);
-  $result = $obj->read($table);
+  $obj = DatabaseConnect::getInstance();
+  //$obj   = new DatabaseConnect();
+  //$table = $obj->connection();
+  $table = 'customerDetail';
+  $arr= array('tablename'=>$table);
+  $result = $obj->select([first_name,email])->table($table)->orderby(first_name)->fetch();
+  // echo "<pre>";
+  // var_dump($result);
+  // die;
+  //$result = $obj->read($arr);
   $obj->closeconnection();
 
 ?>

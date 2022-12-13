@@ -1,7 +1,11 @@
+<?php 
+  $msg = '';
+  session_start();
+  $msg = $_SESSION['err'];
+  $_SESSION['err'] = '';
+?>
 <!doctype html>
 <html lang="en">
-
-<!-- Head tag with Different link tag -->
 
 <head>
   <meta charset="utf-8">
@@ -10,12 +14,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/signup.css">
+  <link rel="stylesheet" href="/css/login.css?v=1">
 </head>
 
 <body>
 
-  <!-- Navbar Of page -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
       <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="#">
@@ -54,12 +57,12 @@
         </ul>
         <div class="d-block me-auto mb-2 mb-lg-0 text-center">
           <button type="button" class="btn">
-            <i class="fa fa-user fa-x"></i>
+          <a href="/view/logincustomer.php"><i class="fa fa-user"></i></a>
           </button>
         </div>
         <div class="d-block me-auto mb-2 mb-lg-0 text-center">
           <button type="button" class="btn">
-            <i class="fa fa-shopping-cart fa-x"></i>
+            <a href="/view/cart.php"><i class="fa fa-shopping-cart fa-x"></i></a>
           </button>
         </div>
         <form class="d-flex ms-2" role="search">
@@ -70,60 +73,58 @@
     </div>
   </nav>
 
-  <!-- section Of page With Different Form Element -->
-  <section class="form my-4 mx-5 mb-3">
+  <section class="form my-4 mx-5">
     <div class="container mt-5">
       <div class="row row-no-gutters">
         <div class="col-lg-5">
           <img src="/assets/login.jpg" class="img-fluid" alt="" height="100%">
         </div>
         <div class="col-lg-7 px-5">
-          <h1 class="mt-2 fw-light">SIGN-UP</h1>
-          <h6 class="py-1">Create Your Account</h6>
-          <form action="/" method="post" id="form">
-            <div class="row">
-              <div class="col-lg-6">
-                <input type="text" placeholder="First-Name" class="form-control my-2 p-2" id="First-Name"
-                  name="firstName" required>
-                <span class="error text-danger" id="firstNameError"></span>
-              </div>
-              <div class="col-lg-6">
-                <input type="text" placeholder="Last-Name" class="form-control my-2 p-2" id="Last-Name" name="lastName"
-                  required>
-                <span class="error text-danger" id="lastNameError"></span>
+          <h1 class="mt-2 fw-light">LOG-IN</h1>
+          <h6 class="py-1">Sign into Your Account</h6>
+          <form action="/login.php" method="post" id="form">
+            <div class="form-row">
+              <div class="col-lg-7">
+                <input type="text" placeholder="email@xyz.com" class="form-control my-2 p-2 formelement"
+                  data-validate="required|emailCheck|min:10|max:40" name="email" id="email">
+                <span class="error text-danger" name="error" id="error-email">
+                </span>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <input type="email" placeholder="email@xyz.com" class="form-control my-2 p-2" id="Email" name="email"
-                  required>
-                <span class="error text-danger" id="emailError"></span>
+            <div class="form-row">
+              <div class="col-lg-7">
+                <input type="text" placeholder="********" class="form-control my-2 p-2 formelement"
+                  data-validate="required|passwordCheck|min:8|max:25" name="password" id="password">
+                <span class="error text-danger" name="error" id="error-password">
+                </span>
               </div>
-              <div class="col-lg-6">
-                <input type="password" placeholder="********" class="form-control my-2 p-2" id="Password"
-                  name="password" required>
-                <span class="error text-danger" id="passwordError"></span>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <button type="submit" id="btn" class="btn btn-outline-dark my-2 p-2 form-control">SIGN-UP</button>
-                </div>
-              </div>
-              <em class="px-2">Already have an Account?
-                <a class="mb-2" href="/view/logincustomer.php">&nbsp;Log-in</a>
-              </em>
             </div>
+
+            <?php if($msg != NULL ) echo $msg . "<br>" ?>
+
+            <div class="form-row">
+              <div class="col-lg-7">
+                <button type="submit" id="btn" class="btn btn-dark my-2 p-2 form-control">LOG-IN</button>
+              </div>
+            </div>
+
+            <a href="#" class="px-2"><em>Forgot Password</a></em>
+
+            <em class="px-2">Don't Have an Account?
+              <a href="/views/signup.html">&nbsp;Sign-Up</a>
+            </em>
           </form>
         </div>
       </div>
+    </div>
   </section>
 
-  <!-- Script tag link -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
-  <!-- <script src="/js/signup.js"></script> -->
-  <script src="/js/formvalidation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="/jquery/formvalidationquery.js"></script>
+  <!-- <script src="/js/formvalidation.js"></script>-->
 </body>
 
 </html>

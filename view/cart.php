@@ -1,3 +1,9 @@
+<?php
+  $msg = '';
+  session_start();
+  $msg = $_SESSION['err'];
+  $_SESSION['err'] = '';
+?>
 <!doctype html>
 <html lang="en">
 
@@ -172,7 +178,9 @@
                 <button type="submit" id="btn" name="checkOut"
                   class="btn btn-outline-primary my-2 p-2 form-control">Check-Out</button>
               </div>
-            </div class="col-lg-2">
+          </div class="col-lg-2">
+          <?php if($msg != NULL ) echo $msg . "<br>" ?>
+          </div>
         </div>
         </form>
       </div>
