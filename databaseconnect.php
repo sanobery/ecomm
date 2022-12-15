@@ -13,6 +13,8 @@ class DatabaseConnect{
   protected $columns;
   protected $orderby;
   protected $query;
+  protected $ascDesc;
+  // protected $desc;
   
   private function __construct(){
     $this->servername = "localhost";
@@ -155,15 +157,11 @@ class DatabaseConnect{
 
   public function table($tablename){
     $this->tablename = $tablename;
-    // var_dump($this->tablename);
-    // die;
     return $this;
   }
 
   public function where($where){
     $this->where = $where;
-    // var_dump($this->where);
-    // die;
     return $this;
   }
 
@@ -175,18 +173,17 @@ class DatabaseConnect{
         $columns = $this->columns;
       }
       if(!empty($this->where)){
-        $strarr = $this->parseString($this->where);
+        $strarr = $this->parseString($this->where,'where');
         $string = implode(' AND ',$strarr);
         $condition = "WHERE $string"; 
       }
       if(!empty($this->orderby)){
-        $orderby = $this->orderby;
-        $condition .= "ORDER BY $orderby";
+        $strarr = $this->parseString($this->orderby,'orderby');
+        $string = implode(',',$strarr);
+        $condition .= " ORDER BY $string ";
       }
       $tablename = $this->tablename;
-      $this->query = "SELECT $columns FROM $tablename $condition";
-      // var_dump($this->query);
-      // die;
+      $this->query = "SELECT $columns FROM $tablename $condition ";
       $stmt = self::$conn->prepare($this->query);
       $stmt->execute();
       return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -196,17 +193,31 @@ class DatabaseConnect{
     }
   }
   
-  public function parseString($arr){
+  public function parseString(array $arr,$item){
     $data = [];
-    foreach ($arr as $condition) {
-      $conditionString = '';
-      $conditionString .= $condition[0]. ' ' .$condition[1]." '$condition[2]'"; 
-      array_push($data,$conditionString);
+    switch ($item){
+      case 'where':
+        foreach($arr as $condition){
+          $conditionString = '';
+          $conditionString = $condition[0].' '. $condition[1].' '." '$condition[2]'";
+          array_push($data,$conditionString);
+        }
+        return $data;
+        break;
+      case 'orderby':
+        foreach($arr as $condition){
+          $conditionString = '';
+          $conditionString = $condition[0].' '. $condition[1];
+          array_push($data,$conditionString);
+        }
+        return $data;
+        break;
+
     }
     return $data;
   }
 
-  public function orderby($column){
+  public function orderBy($column){
     $this->orderby = $column;
     return $this;
   }

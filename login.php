@@ -7,9 +7,6 @@
   $table = 'customerDetail';
   $email  = $_POST['email'];
   $pass   = $_POST['password'];
-  // var_dump($email);
-  // die;
-  //$arr = array('tablename'=> 'customerDetail' , 'email'=>$email ,'password'=>$pass);
   $result = $obj->table($table)->where([['email','=',$email],['password','=',$pass]])->fetch();
   $obj->closeconnection();
 

@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   $('.btn').off().on('click', function () {
     let items = [];
     if (typeof Storage !== "undefined") {

@@ -6,9 +6,9 @@ $(document).ready(function cartitem() {
     tableData +=
       "<tr>" +
       "<td>" +
-      '<div class="product-img">' +
-      '<div class="img-prod">' +
-      '<img src="' +
+      '<div class = "product-img">' +
+      '<div class = "img-prod">' +
+      '<img src = "' +
       data.itemSrc +
       '">' +
       "</div>" +
@@ -25,24 +25,24 @@ $(document).ready(function cartitem() {
       "</p>" +
       "</td>" +
       "<td >" +
-      '<div class="display">' +
-      '<button class="btn btn-danger quantityDecrease" data-size="' +
+      '<div class = "display">' +
+      '<button class = "btn btn-danger quantityDecrease" data-size = "' +
       data.itemSize +
-      '" data-quantity="' +
+      '" data-quantity = "' +
       data.no +
-      '" data-src="' +
+      '" data-src = "' +
       data.itemSrc +
       '">' +
       "-" +
       "</button>" +
-      '<p class="size text-center">' +
+      '<p class = "size text-center">' +
       data.no +
       "</p>" +
-      '<button class="btn btn-primary quantityIncrease"  data-size="' +
+      '<button class = "btn btn-primary quantityIncrease"  data-size = "' +
       data.itemSize +
-      '" data-quantity="' +
+      '" data-quantity = "' +
       data.no +
-      '" data-src="' +
+      '" data-src = "' +
       data.itemSrc +
       '">' +
       "+" +
@@ -60,14 +60,14 @@ $(document).ready(function cartitem() {
       "</p>" +
       "</td>" +
       "<td>" +
-      '<button class="btn btn-sm btn-danger delete"  data-size="' +
+      '<button class = "btn btn-sm btn-danger delete"  data-size = "' +
       data.itemSize +
-      '" data-quantity="' +
+      '" data-quantity = "' +
       data.no +
-      '" data-src="' +
+      '" data-src = "' +
       data.itemSrc +
       '">' +
-      '<i class="fa fa-trash delete">' +
+      '<i class = "fa fa-trash delete">' +
       "&nbsp;" +
       "</i>" +
       "Remove" +

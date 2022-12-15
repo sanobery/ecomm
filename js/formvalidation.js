@@ -13,7 +13,6 @@ document.getElementById('form').addEventListener('submit', function validate(eve
       if (arraydisplay.length == 1) {
         var check = eval(arraydisplay[0])(formdata[i].name, formdata[i].value);
         if (!check) {
-          //console.log(msg, msg[formdata[i].name]);
           error[i].innerHTML = msg[formdata[i].name].join(" ");
         }
         else {

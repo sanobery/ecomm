@@ -9,10 +9,7 @@
   $first_name = $_POST['first_name'];
   $last_name = $_POST['last_name'];
   $email  = $_POST['email'];
-  // $pass   = $_POST['password'];
-  // $arr = array('tablename'=>'customerDetail' ,'first_name'=>$first_name,'last_name'=>$last_name,'email'=>$email);
-  $result = $obj->read($arr);
-  //$result = $obj->table('customerDetail')->where([['email',]])
+  $result = $obj->table('customerDetail')->where([['first_name','=',$first_name],['last_name','=',$last_name],['email','=',$email]])->fetch();
   if($result){
     $_SESSION['err'] = "Data Already Exists";
     header('Location:/view/cart.php');
