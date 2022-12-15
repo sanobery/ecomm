@@ -5,4 +5,6 @@ const email = document.getElementById("Email");
 const password = document.getElementById("Password");
 const error = document.getElementsByClassName("error");
 
-form.addEventListener("submit", function click() {});
+form.addEventListener("submit", function click() {
+
+});

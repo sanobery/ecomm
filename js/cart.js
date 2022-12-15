@@ -11,9 +11,9 @@ function cartitem() {
     tableData +=
       "<tr>" +
       "<td>" +
-      '<div class="product-img">' +
-      '<div class="img-prod">' +
-      '<img src="' +
+      '<div class = "product-img">' +
+      '<div class = "img-prod">' +
+      '<img src = "' +
       data.itemSrc +
       '">' +
       "</div>" +
@@ -30,26 +30,26 @@ function cartitem() {
       "</p>" +
       "</td>" +
       "<td >" +
-      '<div class="display">' +
-      '<button class="btn btn-danger" data-size="' +
+      '<div class = "display">' +
+      '<button class = "btn btn-danger" data-size="' +
       data.itemSize +
-      '" data-quantity="' +
+      '" data-quantity = "' +
       data.no +
-      '" data-src="' +
+      '" data-src = "' +
       data.itemSrc +
-      '" onclick="quantitydecrease(this)">' +
+      '" onclick = "quantitydecrease(this)">' +
       "-" +
       "</button>" +
-      '<p class="size text-center">' +
+      '<p class = "size text-center">' +
       data.no +
       "</p>" +
-      '<button class="btn btn-primary"  data-size="' +
+      '<button class = "btn btn-primary"  data-size = "' +
       data.itemSize +
-      '" data-quantity="' +
+      '" data-quantity = "' +
       data.no +
-      '" data-src="' +
+      '" data-src = "' +
       data.itemSrc +
-      '" onclick="quantityincrease(this)">' +
+      '" onclick = "quantityincrease(this)">' +
       "+" +
       "</button>" +
       "</div>" +
@@ -65,14 +65,14 @@ function cartitem() {
       "</p>" +
       "</td>" +
       "<td>" +
-      '<button class="btn btn-sm btn-danger"  data-size="' +
+      '<button class = "btn btn-sm btn-danger"  data-size = "' +
       data.itemSize +
-      '" data-quantity="' +
+      '" data-quantity = "' +
       data.no +
-      '" data-src="' +
+      '" data-src = "' +
       data.itemSrc +
-      '" onclick="Delete(this);">' +
-      '<i class="fa fa-trash delete">' +
+      '" onclick = "Delete(this);">' +
+      '<i class = "fa fa-trash delete">' +
       "&nbsp;" +
       "</i>" +
       "Remove" +

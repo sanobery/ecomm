@@ -1,3 +1,9 @@
+<?php 
+  $msg = '';
+  session_start();
+  $msg = $_SESSION['err'];
+  $_SESSION['err'] = '';
+?>
 <!doctype html>
 <html lang="en">
 
@@ -51,12 +57,12 @@
         </ul>
         <div class="d-block me-auto mb-2 mb-lg-0 text-center">
           <button type="button" class="btn">
-            <i class="fa fa-user fa-x"></i>
+          <a href="/view/logincustomer.php"><i class="fa fa-user"></i></a>
           </button>
         </div>
         <div class="d-block me-auto mb-2 mb-lg-0 text-center">
           <button type="button" class="btn">
-            <i class="fa fa-shopping-cart fa-x"></i>
+            <a href="/view/cart.php"><i class="fa fa-shopping-cart fa-x"></i></a>
           </button>
         </div>
         <form class="d-flex ms-2" role="search">
@@ -81,16 +87,21 @@
               <div class="col-lg-7">
                 <input type="text" placeholder="email@xyz.com" class="form-control my-2 p-2 formelement"
                   data-validate="required|emailCheck|min:10|max:40" name="email" id="email">
-                <span class="error text-danger" name="error" id="error-email"></span>
+                <span class="error text-danger" name="error" id="error-email">
+                </span>
               </div>
             </div>
             <div class="form-row">
               <div class="col-lg-7">
                 <input type="text" placeholder="********" class="form-control my-2 p-2 formelement"
                   data-validate="required|passwordCheck|min:8|max:25" name="password" id="password">
-                <span class="error text-danger" name="error" id="error-password"></span>
+                <span class="error text-danger" name="error" id="error-password">
+                </span>
               </div>
             </div>
+
+            <?php if($msg != NULL ) echo $msg . "<br>" ?>
+
             <div class="form-row">
               <div class="col-lg-7">
                 <button type="submit" id="btn" class="btn btn-dark my-2 p-2 form-control">LOG-IN</button>
@@ -113,7 +124,7 @@
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="/jquery/formvalidationquery.js"></script>
-  <!-- <script src="/js/formvalidation.js"></script> -->
+  <!-- <script src="/js/formvalidation.js"></script>-->
 </body>
 
 </html>

@@ -16,10 +16,15 @@ body {
   box-shadow: 12px 12px 22px grey;
 }
 
-img {
+/* img {
   width: max-content;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+} */
+
+.img-fluid {
+  max-width: 100%;
+  height: 100%;
 }
 
 footer {
